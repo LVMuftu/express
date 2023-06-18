@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- 
+        include("./headers/headtag")
+        %>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/*font-family: 'Righteous', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
+/*font-family: 'Cormorant Upright', serif;*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    user-select: none;
+    background-color: #222;
+    color: #ddd;
+    user-zoom: none;
+    font-family: 'Righteous', cursive;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+input:focus,
+button:focus,
+textarea:focus {
+    border: none;
+}
+input,textarea{
+    text-align: center;
+}
+span{
+    display: flex;
+}
+
+        </style>
+</head>
+<body>
+    <style>
+        #div{
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Cormorant Upright', serif;
+            font-size: 5vh;
+            font-weight: 900;
+            background:radial-gradient(red,#000);
+            color: #fff;
+            
+            box-shadow: 0px 10px 10px #fff;
+        }
+        p{
+            font-size: 30px;
+            margin: 40px;
+        }
+    </style>
+    <div id="div">Hay Aksi Bir Sorun Var :<p>
+        <%= err%>
+    </p><p><a href="<%=href%>">
+        <%=shw%>
+    </a></p></div>
+
+    
+</body>
+</html>

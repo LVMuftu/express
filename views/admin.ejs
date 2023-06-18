@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- 
+        include("./headers/headtag") %>
+        <link rel="stylesheet" href="lvmufutcss/lvmstyle.css">
+</head>
+<body>
+    <style>
+        body,form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            border-bottom: 2px solid #000;
+            width: 150%;
+            margin:20px 0px;
+            height: 40px;
+            box-shadow: 0px 0px 10px #aaf;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+        input:hover{
+            border: none;
+            border-radius: 2px;
+            transition: .5s ease-in-out;
+            
+        }
+        input[type="submit"]:hover{
+            background-color: #ccf;
+            color: #000;
+            transition: .5s ease-in-out;
+            box-shadow: inset 0px 0px 5px #000;
+            border-radius: 20px;
+            }
+        
+    </style>
+    <form action="/admin" method="post">
+        <input autocomplete="off" placeholder="Ürün İsmi" type="text"  name="name" id="" required>
+        <input autocomplete="off" placeholder="Barkod numarası" type="text" name="code" required  id="">
+        <input autocomplete="off" placeholder="kaydedilecek ürün sayısı" type="text" name="stock" required  id="">
+        <input autocomplete="off" placeholder="Alış fiyat bilgisi" type="text" name="priceA" required  id="">
+        <input autocomplete="off" placeholder="Satış fiyat bilgisi" type="text" name="priceB" required  id="">
+        <input placeholder="" type="submit" value="KAYDET">
+
+
+    </form>
+    
+</body>
+</html>

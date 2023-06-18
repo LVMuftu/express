@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include("./headers/headtag") %>
+  
+</head>
+
+<body>
+
+    <style>
+        
+        *{
+            color:#000;
+            user-select: none;
+        }
+        body{
+            background: radial-gradient(#324,#32bfce);
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+
+        }
+        input{
+            width: 300px;
+            height: 70px;
+            font-size: 50px;
+            border-bottom: 2px solid #1fb;
+            border-radius: 20px;
+        }
+        input[type="submit"],button{
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+
+    <!-- Link Kısaltma Formu-->
+    <form action="/shortURL" method="post">
+        <input autocomplete="off"  type="text" name="url" id="" required placeholder="Linki Buraya Ekleyin">
+        <input  autocomplete="off" type="text" name="shdw" id="qwe"  placeholder="Kısaltma İsmi Girin">
+        
+        <input type="submit" value="Tıkla">
+    </form>
+    <span><p>Kısaltma ismi oluştur</p><button id="name">Kısalt</button></span>
+    <script>
+        const rename = document.getElementById("qwe");
+        document.getElementById("name").addEventListener("click",()=>{
+            const named = () => {
+                const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split("");
+                let res = "";
+                for(let i = 0 ; i < 4 ; i++){
+                    res+= chars[Math.floor(Math.random()*chars.length)];
+                }
+                rename.value = res;
+            }
+            named();    
+        })
+    </script>
+</body>
+</html>

