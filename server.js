@@ -6,7 +6,7 @@ const model = require("./models/model");
 const mdlshort = require("./models/shorter");
 const port = 3000;
 lvm.cpx("cls",lvm.tipo.unix());
-const dburl=""; // linki mongoDB sitesinden alınmalı
+const dburl="https://cloud.mongodb.com/v2/663bd02e1cd96d5a0e63b937#/overview?automateSecurity=true&connectCluster=Cluster0"; // linki mongoDB sitesinden alınmalı
   mongoose.connect(dburl,{useNewUrlParser:true}).then(r=>lvm.cpx("mongoose Bağlantısı gerçekleşti")).catch(e=>lvm.cpx(e))
 
 let errobj;
